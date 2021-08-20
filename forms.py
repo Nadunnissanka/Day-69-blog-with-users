@@ -27,6 +27,8 @@ class LoginForm(FlaskForm):
     password = PasswordField("Password", validators=[DataRequired()])
     submit = SubmitField("Login")
 
+
 # WTForm - Comments Section Form
 class CommentForm(FlaskForm):
-    
+    comment = CKEditorField('Leave a comment', validators=[DataRequired()])
+    submit = SubmitField("Comment")
